@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>北仑·碧辰玥府 5#1301 | 一川建筑空间设计</title>
+<meta name="description" content="北仑碧辰玥府5号楼1301室室内设计——温暖现代主义住宅，一川建筑空间设计作品">
+<meta property="og:title" content="北仑·碧辰玥府 | 一川建筑空间设计">
+<meta property="og:description" content="温暖现代主义住宅 · Warm Modernism Residence">
+<meta property="og:image" content="https://res.cloudinary.com/dnbrezjsf/image/upload/q_auto,f_auto/v1781761245/yichuan/beichen/nq2wb1ebvfshub3jsdqq.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ========== RESET & BASE ========== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Noto Sans SC', -apple-system, sans-serif;
+  background: #FAF8F5;
+  color: #2C2416;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+
+/* ========== NAV ========== */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(250,248,245,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(212,201,173,0.3);
+  padding: 16px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s;
+}
+.nav__logo {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.2rem;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  color: #2C2416;
+}
+.nav__back {
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  color: #9A8B70;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.nav__back:hover { color: #2C2416; }
+
+/* ========== TYPOGRAPHY ========== */
+.serif { font-family: 'Noto Serif SC', 'Cormorant Garamond', serif; }
+.display-font { font-family: 'Cormorant Garamond', 'Noto Serif SC', serif; }
+
+/* ========== LAYOUT ========== */
+.container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+.section { padding: 100px 0; }
+
+/* ========== HERO ========== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  overflow: hidden;
+  background: #E8DCC4;
+}
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.92;
+}
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(44,36,22,0.15) 0%, rgba(44,36,22,0) 30%, rgba(44,36,22,0) 60%, rgba(44,36,22,0.55) 100%);
+}
+.hero__content {
+  position: absolute;
+  bottom: 80px;
+  left: 60px;
+  right: 60px;
+  z-index: 10;
+  color: #FFF;
+}
+.hero__label {
+  font-size: 0.75rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-bottom: 16px;
+  font-weight: 300;
+}
+.hero__title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 30px rgba(0,0,0,0.3);
+}
+.hero__subtitle {
+  font-size: 1.15rem;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  opacity: 0.9;
+}
+.hero__scroll-hint {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #FFF;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  opacity: 0.6;
+  animation: float 2s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-8px); }
+}
+
+/* ========== INFO BAR ========== */
+.info-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1px;
+  background: #DDD4C4;
+  border-top: 1px solid #D0C7B5;
+  border-bottom: 1px solid #D0C7B5;
+}
+.info-item { background: #FAF8F5; padding: 28px 32px; text-align: left; }
+.info-label { font-size: 0.68rem; letter-spacing: 0.25em; text-transform: uppercase; color: #A09580; margin-bottom: 8px; font-weight: 500; }
+.info-value { font-family: 'Noto Serif SC', serif; font-size: 1rem; font-weight: 600; color: #2C2416; }
+
+/* ========== INTRO ========== */
+.intro { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.intro__text h2 { font-family: 'Noto Serif SC', serif; font-size: 0.72rem; letter-spacing: 0.35em; text-transform: uppercase; color: #B8A88A; margin-bottom: 24px; font-weight: 400; }
+.intro__text h3 { font-family: 'Noto Serif SC', serif; font-size: clamp(1.6rem, 2.8vw, 2.4rem); font-weight: 700; line-height: 1.4; margin-bottom: 32px; color: #2C2416; }
+.intro__text p { font-size: 1rem; line-height: 2; color: #5A4D38; margin-bottom: 18px; }
+.intro__text p:last-child { margin-bottom: 0; }
+.intro__image { position: relative; border-radius: 2px; overflow: hidden; box-shadow: 0 20px 60px rgba(44,36,22,0.10); }
+.intro__image img { width: 100%; transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1); }
+.intro__image:hover img { transform: scale(1.02); }
+
+/* ========== QUOTE ========== */
+.quote-block { background: #F3EDDF; padding: 80px 60px; margin: 40px 0; position: relative; }
+.quote-block::before { content: '\201C'; position: absolute; top: 20px; left: 40px; font-family: 'Cormorant Garamond', serif; font-size: 140px; color: #D4C9AD; line-height: 1; pointer-events: none; }
+.quote-text { font-family: 'Noto Serif SC', serif; font-size: clamp(1.2rem, 2vw, 1.65rem); line-height: 2; color: #4A3D2A; max-width: 800px; margin: 0 auto; position: relative; z-index: 1; font-weight: 400; text-align: center; }
+
+/* ========== SPACE SECTION ========== */
+.space-section { padding: 90px 0; }
+.space-header { margin-bottom: 50px; }
+.space-number { font-family: 'Cormorant Garamond', serif; font-size: 0.75rem; letter-spacing: 0.3em; color: #C4B697; text-transform: uppercase; margin-bottom: 10px; }
+.space-title { font-family: 'Noto Serif SC', serif; font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 700; color: #2C2416; letter-spacing: 0.05em; }
+.space-subtitle { font-size: 0.95rem; color: #9A8B70; margin-top: 8px; font-weight: 300; letter-spacing: 0.08em; }
+.layout-a { display: grid; grid-template-columns: 1.3fr 1fr; gap: 60px; align-items: start; }
+.layout-b { display: grid; grid-template-columns: 1fr 1.3fr; gap: 60px; align-items: start; }
+.space-images img { width: 100%; border-radius: 2px; box-shadow: 0 16px 48px rgba(44,36,22,0.08); margin-bottom: 20px; }
+.space-images img:last-child { margin-bottom: 0; }
+.space-text h4 { font-family: 'Noto Serif SC', serif; font-size: 1.05rem; font-weight: 600; color: #2C2416; margin-bottom: 16px; letter-spacing: 0.04em; }
+.space-text p { font-size: 0.95rem; line-height: 2; color: #6B5D47; margin-bottom: 14px; }
+.space-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.tag { font-size: 0.72rem; padding: 5px 14px; border: 1px solid #D4C9AD; border-radius: 20px; color: #8B7D63; letter-spacing: 0.06em; background: transparent; transition: all 0.3s; }
+.tag:hover { background: #EDE6D4; border-color: #C4B697; }
+
+/* ========== FULL-BLEED ========== */
+.full-bleed { width: calc(100% + 80px); margin-left: -40px; margin-right: -40px; position: relative; }
+.full-bleed img { width: 100%; height: auto; display: block; }
+.full-bleed-caption { position: absolute; bottom: 24px; right: 56px; color: #FFF; font-size: 0.78rem; letter-spacing: 0.12em; text-shadow: 0 1px 8px rgba(0,0,0,0.4); background: rgba(0,0,0,0.25); padding: 6px 16px; border-radius: 2px; }
+
+/* ========== DUAL GRID ========== */
+.dual-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.dual-grid img { width: 100%; border-radius: 2px; box-shadow: 0 12px 36px rgba(44,36,22,0.07); }
+
+/* ========== PALETTE ========== */
+.palette-section { background: #2C2416; color: #F5F0E8; padding: 90px 0; }
+.palette-title { font-family: 'Noto Serif SC', serif; font-size: 0.72rem; letter-spacing: 0.35em; text-transform: uppercase; color: #A09580; margin-bottom: 40px; text-align: center; }
+.palette-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; max-width: 1100px; margin: 0 auto; }
+.palette-card { text-align: center; }
+.swatch { width: 100%; aspect-ratio: 1; border-radius: 50%; margin-bottom: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.25); transition: transform 0.3s; }
+.swatch:hover { transform: scale(1.06); }
+.swatch-name { font-family: 'Noto Serif SC', serif; font-size: 0.9rem; font-weight: 600; margin-bottom: 4px; }
+.swatch-code { font-size: 0.72rem; color: #A09580; font-family: 'Courier New', monospace; letter-spacing: 0.05em; }
+.material-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 900px; margin: 60px auto 0; text-align: center; }
+.material-item h5 { font-family: 'Noto Serif SC', serif; font-size: 1rem; font-weight: 600; margin-bottom: 8px; color: #E8DCC4; }
+.material-item p { font-size: 0.85rem; color: #A09580; line-height: 1.7; }
+
+/* ========== CLOSING ========== */
+.closing { text-align: center; padding: 100px 40px 120px; background: #F5F0E6; }
+.closing-logo { font-family: 'Noto Serif SC', serif; font-size: 2.5rem; font-weight: 900; letter-spacing: 0.2em; margin-bottom: 24px; color: #2C2416; }
+.closing-text { font-size: 1rem; color: #7A6B54; max-width: 550px; margin: 0 auto 40px; line-height: 2; }
+.closing-divider { width: 40px; height: 2px; background: #C4B697; margin: 0 auto 30px; }
+.contact-info { font-size: 0.82rem; color: #A09580; letter-spacing: 0.1em; }
+
+/* ========== FOOTER ========== */
+.footer { background: #1A1612; color: #6B5D47; text-align: center; padding: 30px; font-size: 0.75rem; letter-spacing: 0.1em; }
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+  .intro { grid-template-columns: 1fr; gap: 50px; }
+  .layout-a, .layout-b { grid-template-columns: 1fr; gap: 40px; }
+  .palette-grid { grid-template-columns: repeat(3, 1fr); }
+  .material-list { grid-template-columns: repeat(2, 1fr); }
+  .hero__content { left: 30px; right: 30px; bottom: 60px; }
+  .nav { padding: 12px 24px; }
+}
+@media (max-width: 640px) {
+  .container { padding: 0 20px; }
+  .section { padding: 60px 0; }
+  .hero__content { left: 20px; right: 20px; bottom: 50px; }
+  .info-bar { grid-template-columns: repeat(2, 1fr); }
+  .dual-grid { grid-template-columns: 1fr; }
+  .palette-grid { grid-template-columns: repeat(2, 1fr); }
+  .material-list { grid-template-columns: 1fr; }
+  .quote-block { padding: 50px 30px; }
+  .full-bleed { width: 100%; margin-left: 0; margin-right: 0; }
+  .nav { padding: 10px 16px; }
+  .nav__logo { font-size: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <a href="index.html" class="nav__logo">一 川</a>
+  <a href="index.html" class="nav__back">&larr; 返回作品集</a>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <img class="hero__bg" src="https://res.cloudinary.com/dnbrezjsf/image/upload/q_auto,f_auto/v1781761245/yichuan/beichen/nq2wb1ebvfshub3jsdqq.jpg" alt="北仑·碧辰玥府 客厅全景">
+  <div class="hero__overlay"></div>
+  <div class="hero__content">
+    <p class="hero__label">Interior Design Portfolio</p>
+    <h1 class="hero__title">北仑·碧辰玥府<br><span style="font-size:0.55em;font-weight:400;letter-spacing:0.2em;">5号楼 · 1301室</span></h1>
+    <p class="hero__subtitle">温暖现代主义住宅 · Warm Modernism Residence</p>
+  </div>
+  <div class="hero__scroll-hint">↓ SCROLL</div>
+</section>
+
+<!-- ============ INFO BAR ============ -->
+<div class="info-bar">
+  <div class="info-item">
+    <div class="info-label">Location / 项目位置</div>
+    <div class="info-value">宁波 · 北仑</div>
+  </div>
+  <div class="info-item">
+    <div class="info-label">Type / 项目类型</div>
+    <div class="info-value">私宅室内设计</div>
+  </div>
+  <div class="info-item">
+    <div class="info-label">Style / 设计风格</div>
+    <div class="info-value">温暖现代主义</div>
+  </div>
+  <div class="info-item">
+    <div class="info-label">Design / 设计机构</div>
+    <div class="info-value">一川建筑空间设计</div>
+  </div>
+</div>
+
+<!-- ============ INTRO ============ -->
+<section class="section">
+  <div class="container">
+    <div class="intro">
+      <div class="intro__text">
+        <h2>Design Concept / 设计理念</h2>
+        <h3>家，是温度的容器<br><span style="font-size:0.6em;font-weight:400;color:#9A8B70;">Home as a Vessel of Warmth</span></h3>
+        <p>碧辰玥府 5#1301 的设计起点，不是一张效果图或一个风格标签，而是一个关于「回家后第一眼想看到什么」的提问。</p>
+        <p>业主是一对追求生活质感的年轻夫妇。他们不追逐潮流，却对空间的温度有着近乎直觉的敏感。他们希望家是一个可以卸下所有社交面具的地方——安静、有序、但不冷清。</p>
+        <p>我们的回应是：以<strong>暖调奶油色</strong>为基底，用<strong>原木</strong>串联全屋的视觉骨架，在关键节点嵌入<strong>中古家具</strong>与<strong>艺术感软装</strong>，让每个空间都有自己的性格表情，又共享同一种呼吸节奏。</p>
+        <p>这不是极简主义的冷淡克制，也不是复古风格的怀旧堆砌——它是一种<strong>有温度的现代感</strong>。</p>
+      </div>
+      <div class="intro__image">
+        <img src="https://res.cloudinary.com/dnbrezjsf/image/upload/q_auto,f_auto/v1781761263/yichuan/beichen/ow9yi7db627oqoxiwmbe.jpg" alt="客餐厅全景">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUOTE ============ -->
+<section class="quote-block">
+  <p class="quote-text">
+    好的设计不会大喊大叫。<br>它用光线的角度、木纹的走向、沙发的弧度，<br>悄悄告诉你：你到家了。
+  </p>
+</section>
+
+<!-- ============ LIVING ROOM ============ -->
+<section class="space-section" id="living-room">
+  <div class="container">
+    <div class="space-header">
+      <p class="space-number">01 — Living Space</p>
+      <h2 class="space-title">客厅 · 公共空间的叙事核心</h2>
+      <p class="space-subtitle">The Narrative Core of Shared Living</p>
+    </div>
+    <div class="layout-a">
+      <div class="space-images">
+        <img src="https://res.cloudinary.com/dnbrezjsf/image/upload/q_auto,f_auto/v1781761250/yichuan/beichen/ciynhht1bcis8rnlv7oo.jpg" alt="客厅细节">
+        <img src="https://res.cloudinary.com/dnbrezjsf/image/upload/q_auto,f_auto/v1781761253/yichuan/beichen/xtwxiqysq0fo6rphxabr.jpg" alt="客厅电视墙区域">
+      </div>
+      <div class="space-text">
+        <h4>一个会呼吸的客厅</h4>
+        <p>客厅是整个家的「序章」。我们放弃了传统电视背景墙的做法，取而代之的是一面<strong>日式玻璃隔断</strong>——它既是空间分隔的轻量级解决方案，也是光线自由穿行的通道。</p>
+        <p>深色皮革沙发（拉扣设计）是整个公共区的视觉锚点。它的存在不是为了抢戏，而是为了和周围的原木柜体、几何地毯、抽象挂画形成一场<strong>质感对话</strong>——皮革的冷峻、木头的温润、织物的柔软、金属的利落，四种材质在同一空间里各司其职、彼此成就。</p>
+        <p>可移动电视架的设计赋予空间弹性：需要开阔时推到一边，需要围合时归位即可。这是我们对「固定布局」的一次温和反叛。</p>
+        <div class="space-tags">
+          <span class="tag">玻璃隔断</span>
+          <span class="tag">中古皮沙发</span>
+          <span class="tag">定制木作</span>
+          <span class="tag">几何地毯</span>
+          <span class="tag">可移动电视架</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FULL BLEED: LIVING ROOM ============ -->
+<div class="container">
+  <div class="full-bleed">
+    <img src="https://res.cloudinary.com/dnbrezjsf/image/upload/q_auto,f_auto/v1781761258/yichuan/beichen/ffqexuufgs4bq0a4caer.jpg" alt="客厅全景宽幅">
+    <span class="full-bleed-caption">LIVING ROOM · 客厅全景</span>
+  </div>
+</div>
+
+<!-- ============ DINING AREA ============ -->
+<section class="space-section" id="dining">
+  <div class="container">
+    <div class="space-header">
+      <p class="space-number">02 — Dining Area</p>
+      <h2 class="space-title">餐区 · 一日三餐的仪式感</h2>
+      <p class="space-subtitle">Ritual in Everyday Meals</p>
+    </div>
+    <div class="layout-b">
+      <div class="space-text">
+        <h4>圆桌哲学</h4>
+        <p>我们选择了圆桌而非长桌。原因很朴素：<strong>圆意味着没有主次之分</strong>，每个人坐在哪里都是中心。</p>
+        <p>餐区最值得说的一笔是那扇<strong>定制的木门</strong>——门板上四个方形镂空不是装饰，而是对传统中式窗棂的当代转译。它让走廊的光线可以渗透进来，也让用餐区和玄关之间形成一种「看得见但分得开」的暧昧关系。</p>
+        <p>黄铜吊灯从天花板垂落，在圆桌上投下柔和的光晕。这里的设计语言延续了客厅的温暖基调，但通过更紧凑的空间尺度和更具包裹感的木质围合，营造出一种<strong>亲密而不拥挤</strong>的就餐氛围。</p>
+        <div class="space-tags">
+          <span class="tag">圆餐桌</span>
+          <span class="tag">黄铜吊灯</span>
+          <span class="tag">定制木门</span>
+          <span class="tag">嵌入式储物</span>
+        </div>
+      </div>
+      <div class="space-images">
+        <img src="https://res.cloudinary.com/dnbrezjsf/image/upload/q_auto,f_auto/v1781761283/yichuan/beichen/oejw8eprl7hk8hxqcbvm.jpg" alt="餐厅全景">
+        <img src="https://res.cloudinary.com/dnbrezjsf/image/upload/q_auto,f_auto/v1781761288/yichuan/beichen/akhvzmah2sfkq6796w2d.jpg" alt="餐厅细节">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MASTER BEDROOM ============ -->
+<section class="space-section" id="master-bedroom">
+  <div class="container">
+    <div class="space-header">
+      <p class="space-number">03 — Master Bedroom</p>
+      <h2 class="space-title">主卧 · 沉浸式的私人领域</h2>
+      <p class="space-subtitle">An Immersive Private Sanctuary</p>
+    </div>
+    <div class="layout-a">
+      <div class="space-images">
+        <img src="https://res.cloudinary.com/dnbrezjsf/image/upload/q_auto,f_auto/v1781761271/yichuan/beichen/ko1tajlz72vyy0cxlp88.jpg" alt="主卧全景">
+        <div class="dual-grid" style="margin-top:20px;">
+          <img src="https://res.cloudinary.com/dnbrezjsf/image/upload/q_auto,f_auto/v1781761274/yichuan/beichen/omhmm5unrrabqh1f5ljo.jpg" alt="主卧床头细节">
+          <img src="https://res.cloudinary.com/dnbrezjsf/image/upload/q_auto,f_auto/v1781761279/yichuan/beichen/za6kf2fu6ep4bkh97bcv.jpg" alt="主卧衣柜系统">
+        </div>
+      </div>
+      <div class="space-text">
+        <h4>深色系的主卧逻辑</h4>
+        <p>与公共区域的明亮基调不同，主卧主动走向了<strong>更深沉的色调</strong>。这不是随意的风格切换，而是一次有意识的心理设计——卧室是用来休息的，它应该比客厅更安静、更内敛。</p>
+        <p>深灰蓝色的软包床靠背搭配深色地板，将整个空间的色温降了下来。但我们没有让它变得压抑：米白色的床品、暖木色的床头背板和斗柜、以及墙上三幅<strong>色彩跳跃的抽象画</strong>（红、蓝、黄），共同完成了一次精准的色彩平衡。</p>
+        <p>衣柜系统采用了「到顶柜体 + 开放式挂衣区」的组合方案。开放部分不只是为了方便，更是为了让衣物成为空间的一部分——好的衣服不该被完全藏起来。</p>
+        <div class="space-tags">
+          <span class="tag">深色系卧室</span>
+          <span class="tag">软包床靠</span>
+          <span class="tag">到顶衣柜</span>
+          <span class="tag">开放挂衣区</span>
+          <span class="tag">画廊墙面</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STUDY ============ -->
+<section class="space-section" id="study">
+  <div class="container">
+    <div class="space-header">
+      <p class="space-number">04 — Study Nook</p>
+      <h2 class="space-title">书房 · 藏在角落里的灵感温室</h2>
+      <p class="space-subtitle">A Hidden Greenhouse of Ideas</p>
+    </div>
+    <div class="layout-b">
+      <div class="space-text">
+        <h4>芥末黄的意外惊喜</h4>
+        <p>书房是这个家里最「大胆」的一个空间——因为那张<strong>芥末黄的单人沙发</strong>。</p>
+        <p>在全屋以大地色系为主轴的前提下，这个高饱和度的黄色像一颗跳脱出来的音符。但它并不突兀，因为旁边那组<strong>海军蓝的开放式书架</strong>形成了完美的互补色关系：黄与蓝，就像阳光与深海。</p>
+        <p>书房的尺度不大，但每一寸都有用途。壁挂阅读灯可以在不同角度提供聚焦照明；矮柜上方的开放格用来放常读的书和随手拿的小物件；整面到顶的浅色柜体则收纳了大部分杂物，保持视觉上的清爽。</p>
+        <p>这是一个可以一个人待很久、却不会感到孤独的空间。</p>
+        <div class="space-tags">
+          <span class="tag">芥末黄沙发</span>
+          <span class="tag">海军蓝书架</span>
+          <span class="tag">壁挂阅读灯</span>
+          <span class="tag">多功能收纳</span>
+        </div>
+      </div>
+      <div class="space-images">
+        <img src="https://res.cloudinary.com/dnbrezjsf/image/upload/q_auto,f_auto/v1781761292/yichuan/beichen/quxkyghobjqeb41clo2e.jpg" alt="书房全景">
+        <div class="dual-grid" style="margin-top:20px;">
+          <img src="https://res.cloudinary.com/dnbrezjsf/image/upload/q_auto,f_auto/v1781761296/yichuan/beichen/ttbma8hrvdwjx8orb2f2.jpg" alt="书房细节一">
+          <img src="https://res.cloudinary.com/dnbrezjsf/image/upload/q_auto,f_auto/v1781761301/yichuan/beichen/my4yzyduew2a32nep2eh.jpg" alt="书房细节二">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECOND BEDROOM ============ -->
+<section class="space-section" id="second-bedroom">
+  <div class="container">
+    <div class="space-header">
+      <p class="space-number">05 — Second Bedroom</p>
+      <h2 class="space-title">次卧 · 灵活生长的过渡空间</h2>
+      <p class="space-subtitle">A Flexible Transitional Space</p>
+    </div>
+    <div style="margin-bottom:50px;">
+      <img src="https://res.cloudinary.com/dnbrezjsf/image/upload/q_auto,f_auto/v1781761305/yichuan/beichen/djqwbsi3ycrty0s6nveq.jpg" alt="次卧全景" style="width:100%;border-radius:2px;box-shadow:0 16px 48px rgba(44,36,22,0.08);">
+    </div>
+    <div class="intro__text" style="max-width:800px;margin:0 auto;">
+      <h4>有机形态的温柔宣言</h4>
+      <p>次卧的设计策略是：<strong>留白多于填充</strong>。作为一间可能承担客房、儿童房或多功能室的房间，它的基础配置必须足够灵活，同时又有足够的辨识度来避免沦为「随便放张床就完事」的敷衍之作。</p>
+      <p>那张<strong>有机曲线造型的床靠背</strong>是整个空间的灵魂单品。它的不规则轮廓打破了传统床头的方正框架，带来一种松弛的、不被定义的气质。两侧的姜黄色边柜呼应了书房的色彩冒险，四幅<strong>像素化几何挂画</strong>则在墙上排成一条有趣的视觉线索。</p>
+      <p>落地玻璃移门将次卧与厨房区域（或阳台）打通，让自然光可以从头灌到尾。这是我们在每个房间都坚持的原则：<strong>光，是最高级的装修材料</strong>。</p>
+      <div class="space-tags">
+        <span class="tag">有机曲线床靠</span>
+        <span class="tag">姜黄边柜</span>
+        <span class="tag">几何挂画系列</span>
+        <span class="tag">玻璃移门采光</span>
+        <span class="tag">灵活功能定位</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MATERIAL PALETTE ============ -->
+<section class="palette-section">
+  <div class="container">
+    <h3 class="palette-title">Material & Color Palette · 材质与色彩</h3>
+    <div class="palette-grid">
+      <div class="palette-card">
+        <div class="swatch" style="background:#E8DCC4;"></div>
+        <div class="swatch-name">奶油基底</div>
+        <div class="swatch-code">#E8DCC4</div>
+      </div>
+      <div class="palette-card">
+        <div class="swatch" style="background:#C4956A;"></div>
+        <div class="swatch-name">暖调原木</div>
+        <div class="swatch-code">#C4956A</div>
+      </div>
+      <div class="palette-card">
+        <div class="swatch" style="background:#3D4A5C;"></div>
+        <div class="swatch-name">深灰蓝</div>
+        <div class="swatch-code">#3D4A5C</div>
+      </div>
+      <div class="palette-card">
+        <div class="swatch" style="background:#E8A83C;"></div>
+        <div class="swatch-name">芥末黄</div>
+        <div class="swatch-code">#E8A83C</div>
+      </div>
+      <div class="palette-card">
+        <div class="swatch" style="background:#2B4A8C;"></div>
+        <div class="swatch-name">海军蓝</div>
+        <div class="swatch-code">#2B4A8C</div>
+      </div>
+    </div>
+    <div class="material-list">
+      <div class="material-item">
+        <h5>木材</h5>
+        <p>樱桃木 / 橡木饰面<br>贯穿全屋的定制柜体与门板</p>
+      </div>
+      <div class="material-item">
+        <h5>金属</h5>
+        <p>黄铜 / 不锈钢 / 铬合金<br>灯具脚具五金配件</p>
+      </div>
+      <div class="material-item">
+        <h5>织物</h5>
+        <p>真皮 / 棉麻 / 羊毛混纺<br>沙发地毯窗帘软装配饰</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING ============ -->
+<section class="closing">
+  <div class="closing-divider"></div>
+  <h2 class="closing-logo">一 川</h2>
+  <p class="closing-text">
+    我们相信设计的力量不在于创造奇观，<br>
+    而在于让日常生活的每一个瞬间，都值得被认真对待。<br><br>
+    北仑·碧辰玥府 5#1301，是我们对「温暖居住」的一次完整表达。
+  </p>
+  <p class="contact-info">
+    宁波一川建筑空间设计 · YICHUAN INTERIOR DESIGN
+  </p>
+</section>
+
+<footer class="footer">
+  &copy; 2026 宁波一川建筑空间设计有限公司 · All Rights Reserved
+</footer>
+
+</body>
+</html>
