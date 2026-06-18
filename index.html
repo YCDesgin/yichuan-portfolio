@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一川建筑空间设计 | YICHUAN DESIGN</title>
+<meta name="description" content="宁波一川建筑空间设计——温暖现代主义，商业空间与私宅室内设计">
+<meta property="og:title" content="一川建筑空间设计 | YICHUAN DESIGN">
+<meta property="og:description" content="温暖现代主义 · 商业空间与私宅室内设计">
+<meta property="og:image" content="https://res.cloudinary.com/dnbrezjsf/image/upload/q_auto,f_auto/v1781761245/yichuan/beichen/nq2wb1ebvfshub3jsdqq.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ========== RESET & BASE ========== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Noto Sans SC', -apple-system, sans-serif;
+  background: #FAF8F5;
+  color: #2C2416;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+
+/* ========== HERO ========== */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  background: #2C2416;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.35;
+}
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(44,36,22,0.7) 0%, rgba(44,36,22,0.3) 100%);
+}
+.hero__content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: #F5F0E8;
+  padding: 0 40px;
+}
+.hero__brand {
+  font-family: 'Noto Serif SC', serif;
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 900;
+  letter-spacing: 0.3em;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.hero__en {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  letter-spacing: 0.5em;
+  font-weight: 400;
+  opacity: 0.7;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+.hero__tagline {
+  font-family: 'Noto Serif SC', serif;
+  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto 60px;
+  opacity: 0.85;
+}
+.hero__cta {
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  border: 1px solid rgba(212,201,173,0.5);
+  padding: 12px 36px;
+  color: #E8DCC4;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.hero__cta:hover {
+  background: rgba(212,201,173,0.15);
+  border-color: #D4C9AD;
+}
+
+/* ========== SECTION INTRO ========== */
+.studio-intro {
+  padding: 120px 0;
+  text-align: center;
+  background: #FAF8F5;
+}
+.studio-intro__divider {
+  width: 40px;
+  height: 2px;
+  background: #C4B697;
+  margin: 0 auto 50px;
+}
+.studio-intro__title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 30px;
+  color: #2C2416;
+}
+.studio-intro__text {
+  font-size: 1rem;
+  line-height: 2;
+  color: #6B5D47;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ========== PROJECTS GRID ========== */
+.projects {
+  padding: 80px 0 120px;
+  background: #F3EDDF;
+}
+.projects__label {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #B8A88A;
+  text-align: center;
+  margin-bottom: 60px;
+  font-weight: 400;
+}
+.projects__grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 30px;
+}
+
+/* ========== PROJECT CARD ========== */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  background: #FAF8F5;
+  border-radius: 2px;
+  box-shadow: 0 8px 32px rgba(44,36,22,0.06);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(44,36,22,0.12);
+}
+.project-card__image {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+}
+.project-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.project-card:hover .project-card__image img {
+  transform: scale(1.04);
+}
+.project-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(44,36,22,0) 50%, rgba(44,36,22,0.3) 100%);
+  transition: opacity 0.4s;
+}
+.project-card:hover .project-card__overlay {
+  opacity: 0.8;
+}
+.project-card__info {
+  padding: 28px 30px;
+}
+.project-card__category {
+  font-size: 0.68rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #A09580;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.project-card__title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2C2416;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+.project-card__subtitle {
+  font-size: 0.85rem;
+  color: #9A8B70;
+  letter-spacing: 0.08em;
+  font-weight: 300;
+}
+.project-card__arrow {
+  position: absolute;
+  bottom: 28px;
+  right: 30px;
+  font-size: 0.72rem;
+  color: #A09580;
+  letter-spacing: 0.15em;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.4s;
+}
+.project-card:hover .project-card__arrow {
+  opacity: 1;
+  transform: translateX(0);
+  color: #2C2416;
+}
+
+/* ========== ABOUT SECTION ========== */
+.about {
+  background: #2C2416;
+  color: #F5F0E8;
+  padding: 100px 0;
+}
+.about__grid {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.about__label {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #A09580;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+.about__name {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  margin-bottom: 20px;
+}
+.about__text {
+  font-size: 0.95rem;
+  line-height: 2;
+  color: #B8A88A;
+}
+.about__contact {
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  color: #A09580;
+  line-height: 2.2;
+}
+.about__contact strong {
+  color: #E8DCC4;
+  font-weight: 500;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  background: #1A1612;
+  color: #6B5D47;
+  text-align: center;
+  padding: 30px;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+  .projects__grid { grid-template-columns: repeat(2, 1fr); }
+  .about__grid { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 640px) {
+  .projects__grid { grid-template-columns: 1fr; padding: 0 20px; }
+  .hero__brand { letter-spacing: 0.15em; }
+  .about__grid { padding: 0 20px; }
+  .studio-intro { padding: 80px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <img class="hero__bg" src="https://res.cloudinary.com/dnbrezjsf/image/upload/q_auto,f_auto/v1781761245/yichuan/beichen/nq2wb1ebvfshub3jsdqq.jpg" alt="一川设计 作品展示">
+  <div class="hero__overlay"></div>
+  <div class="hero__content">
+    <h1 class="hero__brand">一 川</h1>
+    <p class="hero__en">YICHUAN INTERIOR DESIGN</p>
+    <p class="hero__tagline">
+      我们相信设计的力量不在于创造奇观，<br>
+      而在于让日常生活的每一个瞬间，都值得被认真对待。
+    </p>
+    <a href="#projects" class="hero__cta">VIEW PROJECTS</a>
+  </div>
+</section>
+
+<!-- ============ STUDIO INTRO ============ -->
+<section class="studio-intro">
+  <div class="studio-intro__divider"></div>
+  <h2 class="studio-intro__title">建筑空间 · 从概念到落地</h2>
+  <p class="studio-intro__text">
+    一川建筑空间设计，专注于商业空间与私宅室内设计。<br>
+    我们不追逐风格标签，而是从每一个真实的生活场景出发，<br>
+    用光线、材质和空间逻辑，回应居住者最本能的需求。<br>
+    温暖现代主义——不是冷淡的克制，是有温度的现代感。
+  </p>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="projects" id="projects">
+  <p class="projects__label">Selected Works / 甄选作品</p>
+  <div class="projects__grid">
+
+    <!-- Project 1: 碧辰玥府 -->
+    <a href="beichen.html" class="project-card">
+      <div class="project-card__image">
+        <img src="https://res.cloudinary.com/dnbrezjsf/image/upload/q_auto,f_auto/v1781761245/yichuan/beichen/nq2wb1ebvfshub3jsdqq.jpg" alt="北仑·碧辰玥府">
+        <div class="project-card__overlay"></div>
+      </div>
+      <div class="project-card__info">
+        <div class="project-card__category">Residential / 私宅</div>
+        <h3 class="project-card__title">北仑·碧辰玥府</h3>
+        <p class="project-card__subtitle">温暖现代主义住宅 · 5#1301</p>
+      </div>
+      <span class="project-card__arrow">VIEW &rarr;</span>
+    </a>
+
+    <!-- Placeholder cards for future projects -->
+    <div class="project-card" style="cursor:default;opacity:0.5;">
+      <div class="project-card__image" style="background:#DDD4C4;">
+        <div style="height:100%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;letter-spacing:0.2em;color:#A09580;">COMING SOON</div>
+      </div>
+      <div class="project-card__info">
+        <div class="project-card__category">Commercial / 商业空间</div>
+        <h3 class="project-card__title">沙玛·金融投创中心</h3>
+        <p class="project-card__subtitle">办公空间设计 · 设计中</p>
+      </div>
+    </div>
+
+    <div class="project-card" style="cursor:default;opacity:0.5;">
+      <div class="project-card__image" style="background:#DDD4C4;">
+        <div style="height:100%;display:flex;align-items:center;justify-content:center;font-size:0.8rem;letter-spacing:0.2em;color:#A09580;">COMING SOON</div>
+      </div>
+      <div class="project-card__info">
+        <div class="project-card__category">Residential / 住宅</div>
+        <h3 class="project-card__title">三观·峰云汇 G宅</h3>
+        <p class="project-card__subtitle">私宅设计 · 设计中</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about">
+  <div class="about__grid">
+    <div>
+      <p class="about__label">About Studio / 关于工作室</p>
+      <h2 class="about__name">一 川</h2>
+      <p class="about__text">
+        宁波一川建筑空间设计有限公司，成立于 2024 年。<br>
+        我们专注于室内设计与建筑空间，<br>
+        覆盖私宅住宅、办公空间、商业公共项目。<br><br>
+        每个项目，我们从真实的居住需求出发，<br>
+        用光线、材质和空间逻辑完成一次完整表达。
+      </p>
+    </div>
+    <div>
+      <p class="about__label">Contact / 联系我们</p>
+      <p class="about__contact">
+        <strong>工作室</strong><br>
+        浙江省宁波高新区菁华路188号<br>
+        甬港现代铭楼 B座<br><br>
+        <strong>电话</strong><br>
+        135 6601 2917<br><br>
+        <strong>微信</strong><br>
+        yichuan_design<br><br>
+        <strong>小红书</strong><br>
+        一川设计
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  &copy; 2026 宁波一川建筑空间设计有限公司 · All Rights Reserved
+</footer>
+
+</body>
+</html>
